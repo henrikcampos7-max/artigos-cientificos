@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/henrikcampos7-max/artigos-cientificos/schemas/article-metadata.schema.json",
+  "title": "Metadados de artigo científico",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "slug",
+    "title",
+    "status",
+    "study_type",
+    "authors_confirmed",
+    "human_review",
+    "ai_use_logged",
+    "contains_patient_data",
+    "repository_visibility_approved",
+    "last_verified"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1},
+    "status": {
+      "enum": [
+        "ideia",
+        "protocolo",
+        "rascunho_nao_validado",
+        "revisao_humana",
+        "pronto_para_submissao",
+        "submetido",
+        "aceito",
+        "publicado",
+        "retirado"
+      ]
+    },
+    "study_type": {"type": "string", "minLength": 1},
+    "authors_confirmed": {"type": "boolean"},
+    "human_review": {
+      "type": "object",
+      "required": ["clinical", "methodological", "editorial"],
+      "properties": {
+        "clinical": {"type": "string"},
+        "methodological": {"type": "string"},
+        "editorial": {"type": "string"}
+      }
+    },
+    "ai_use_logged": {"type": "boolean"},
+    "contains_patient_data": {"const": false},
+    "repository_visibility_approved": {"type": "boolean"},
+    "journal": {"type": ["string", "null"]},
+    "doi": {
+      "type": ["string", "null"],
+      "pattern": "^10\\.\\d{4,9}/\\S+$"
+    },
+    "license": {"type": ["string", "null"]},
+    "last_verified": {"type": "string", "format": "date"}
+  }
+}

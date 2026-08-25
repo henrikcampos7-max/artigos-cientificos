@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "slug": "exemplo-artigo",
+  "title": "Título provisório do artigo",
+  "status": "ideia",
+  "study_type": "revisao_narrativa",
+  "authors_confirmed": false,
+  "human_review": {
+    "clinical": "pendente",
+    "methodological": "pendente",
+    "editorial": "pendente"
+  },
+  "ai_use_logged": false,
+  "contains_patient_data": false,
+  "repository_visibility_approved": false,
+  "journal": null,
+  "doi": null,
+  "license": null,
+  "last_verified": "2026-08-23"
+}

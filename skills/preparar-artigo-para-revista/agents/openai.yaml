@@ -1,0 +1,6 @@
+interface:
+  display_name: "Preparar artigo para revista"
+  short_description: "Adaptação editorial científica por periódico"
+  default_prompt: "Use $preparar-artigo-para-revista para analisar as lacunas deste manuscrito e adaptá-lo à revista indicada, sem inventar evidências."
+policy:
+  allow_implicit_invocation: true

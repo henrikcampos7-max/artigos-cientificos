@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "last_verified": "2026-08-24",
+  "purpose": "Roteamento de pedidos por periódico para perfis editoriais verificados.",
+  "journals": [
+    {
+      "slug": "journal-of-hospital-pharmacy-and-health-services",
+      "name": "Journal of Hospital Pharmacy and Health Services",
+      "former_name": "Revista Brasileira de Farmácia Hospitalar e Serviços de Saúde",
+      "aliases": ["JHPHS", "RBFHSS", "revista da SBRAFH", "farmácia hospitalar brasileira"],
+      "region": "nacional",
+      "classification": "referencia-tematica",
+      "profile": "nacional/journal-of-hospital-pharmacy-and-health-services.md"
+    },
+    {
+      "slug": "brazilian-journal-of-pharmaceutical-sciences",
+      "name": "Brazilian Journal of Pharmaceutical Sciences",
+      "aliases": ["BJPS", "Brazilian Journal of Pharmaceutical Science", "Revista Brasileira de Ciências Farmacêuticas"],
+      "region": "nacional",
+      "classification": "referencia-tematica",
+      "profile": "nacional/brazilian-journal-of-pharmaceutical-sciences.md"
+    },
+    {
+      "slug": "revista-brasileira-de-cancerologia",
+      "name": "Revista Brasileira de Cancerologia",
+      "aliases": ["RBC", "revista do INCA", "Brazilian Journal of Cancerology"],
+      "region": "nacional",
+      "classification": "referencia-tematica",
+      "profile": "nacional/revista-brasileira-de-cancerologia.md"
+    },
+    {
+      "slug": "revista-de-saude-publica",
+      "name": "Revista de Saúde Pública",
+      "aliases": ["RSP", "Rev Saude Publica", "revista de saúde pública da USP"],
+      "region": "nacional",
+      "classification": "referencia-ampla",
+      "profile": "nacional/revista-de-saude-publica.md"
+    },
+    {
+      "slug": "cadernos-de-saude-publica",
+      "name": "Cadernos de Saúde Pública",
+      "aliases": ["CSP", "Cad Saude Publica", "Cadernos ENSP"],
+      "region": "nacional",
+      "classification": "referencia-ampla",
+      "profile": "nacional/cadernos-de-saude-publica.md"
+    },
+    {
+      "slug": "ciencia-e-saude-coletiva",
+      "name": "Ciência & Saúde Coletiva",
+      "aliases": ["Ciência e Saúde Coletiva", "C&SC", "CSC", "revista da ABRASCO"],
+      "region": "nacional",
+      "classification": "referencia-ampla",
+      "profile": "nacional/ciencia-e-saude-coletiva.md"
+    },
+    {
+      "slug": "international-journal-of-clinical-pharmacy",
+      "name": "International Journal of Clinical Pharmacy",
+      "aliases": ["IJCP", "Int J Clin Pharm", "International Journal Clinical Pharmacy"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/international-journal-of-clinical-pharmacy.md"
+    },
+    {
+      "slug": "american-journal-of-health-system-pharmacy",
+      "name": "American Journal of Health-System Pharmacy",
+      "aliases": ["AJHP", "Am J Health Syst Pharm", "ASHP journal"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/american-journal-of-health-system-pharmacy.md"
+    },
+    {
+      "slug": "european-journal-of-hospital-pharmacy",
+      "name": "European Journal of Hospital Pharmacy",
+      "aliases": ["EJHP", "Eur J Hosp Pharm", "EAHP journal"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/european-journal-of-hospital-pharmacy.md"
+    },
+    {
+      "slug": "research-in-social-and-administrative-pharmacy",
+      "name": "Research in Social and Administrative Pharmacy",
+      "aliases": ["RSAP", "Res Social Adm Pharm", "social and administrative pharmacy"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/research-in-social-and-administrative-pharmacy.md"
+    },
+    {
+      "slug": "british-journal-of-clinical-pharmacology",
+      "name": "British Journal of Clinical Pharmacology",
+      "aliases": ["BJCP", "Br J Clin Pharmacol", "British clinical pharmacology"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/british-journal-of-clinical-pharmacology.md"
+    },
+    {
+      "slug": "journal-of-oncology-pharmacy-practice",
+      "name": "Journal of Oncology Pharmacy Practice",
+      "aliases": ["JOPP", "J Oncol Pharm Pract", "ISOPP journal", "oncology pharmacy practice"],
+      "region": "internacional",
+      "classification": "referencia-tematica",
+      "profile": "internacional/journal-of-oncology-pharmacy-practice.md"
+    },
+    {
+      "slug": "journal-of-clinical-oncology",
+      "name": "Journal of Clinical Oncology",
+      "aliases": ["JCO", "J Clin Oncol", "ASCO JCO"],
+      "region": "internacional",
+      "classification": "aspiracional-alta-seletividade",
+      "profile": "internacional/journal-of-clinical-oncology.md"
+    },
+    {
+      "slug": "ijaers",
+      "name": "International Journal of Advanced Engineering Research and Science",
+      "aliases": ["IJAERS", "International Journal Advanced Engineering Research Science"],
+      "region": "avaliada",
+      "classification": "diligencia-reforcada",
+      "profile": "avaliadas/ijaers.md"
+    }
+  ]
+}

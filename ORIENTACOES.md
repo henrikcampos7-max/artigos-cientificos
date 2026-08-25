@@ -1,158 +1,143 @@
-# Orientações para Geração de Artigos Científicos
+# Orientações para criação e edição de artigos científicos
 
-> Documento consolidado para orientar a produção dos próximos artigos científicos
-> da farmácia oncológica, revisado em 2026-08-19 após reorientação do processo.
-> Autor: Paulo Henrique Campos da Silva — FACIMED — Cacoal, RO, Brasil.
-> Revista-alvo padrão: IJAERS (ISSN 2349-6495/2456-1908, Qualis A2).
+Revisão editorial de 24 de agosto de 2026. Este documento organiza o trabalho; as decisões científicas, clínicas, éticas e de autoria permanecem com pessoas identificadas e responsáveis.
 
----
+## 1. Autoria responsável e voz própria
 
-## 1. Princípio de autoria
+Um texto autenticamente autoral nasce de decisões intelectuais rastreáveis: pergunta escolhida, justificativa, seleção das evidências, interpretação, limites e implicações. Não se cria “aparência humana” por troca aleatória de palavras, erros propositais ou ferramentas de humanização.
 
-O objetivo é gerar artigos **cientificamente defensáveis e com autoria perceptível** —
-não "textos que enganam detector de IA". Um texto com resultado, interpretação e
-consequência clínica reais é a melhor resposta a qualquer detector.
+- Registrar quem formulou a pergunta, pesquisou, extraiu dados, analisou, redigiu e aprovou.
+- Confirmar critérios de autoria e contribuições CRediT antes de inserir nomes.
+- Não presumir autoria única, titulação, ORCID, afiliação ou endereço.
+- Exemplos de resultado devem ser rotulados como **fictícios** e nunca migrar para um manuscrito real.
+- Manter um diário de decisões editoriais para explicar escolhas e mudanças.
 
-- O texto deve conter **resultado + interpretação + consequência clínica**.
-- Frases genéricas ("A atuação do farmacêutico oncológico é de extrema importância...")
-  não têm autoria: poderiam estar em qualquer manuscrito. Evitar.
-- O opencode estrutura, organiza e revisa; a interpretação, os dados e as decisões
-  metodológicas são do autor.
+## 2. Uso de inteligência artificial
 
-**Exemplo de redação autoral:**
+A IA pode apoiar planejamento, organização, revisão linguística, código e triagem, mas não pode:
 
-> "No período analisado, as intervenções relacionadas à dose e ao esquema terapêutico
-> concentraram a maior proporção das inconformidades identificadas antes da manipulação.
-> Esse achado sugere que a validação farmacêutica exerce função particularmente relevante
-> na etapa prévia ao preparo do antineoplásico, quando ainda é possível corrigir a
-> prescrição sem exposição do paciente ao erro."
+- ser listada como autora;
+- inventar dados, resultados, buscas, fontes ou pareceres;
+- substituir a leitura das fontes citadas;
+- tomar decisões clínicas ou submeter o artigo;
+- ser ocultada quando a política editorial ou as boas práticas exigirem transparência.
 
-## 2. Referências
+O registro interno do uso de IA é obrigatório. A declaração enviada ao periódico deve seguir a política vigente sem omitir proveniência. O ICMJE recomenda descrever ferramenta, finalidade e responsabilidade humana e alerta que a não divulgação pode exigir correção editorial ou ser tratada como má conduta em certas circunstâncias: [ICMJE — Use of AI by Authors](https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html).
 
-1. **Todas reais e verificadas**: DOI confirmado via CrossRef API
-   (`api.crossref.org/works/{DOI}`) OU localização confirmada via PubMed/base de origem.
-   Nenhuma referência sem status VERIFICADA/CORRIGIDA entra no artigo.
-2. **Atualidade**: mínimo **60% das referências de 2021–2026**. Obras clássicas
-   (pré-2020) apenas para contextualização histórica de conceitos fundamentais.
-3. **Metadados completos**: autores (sobrenome + iniciais), ano, título exato,
-   periódico, volume(número):páginas, DOI.
-4. **Autoridade**: priorizar revisões sistemáticas, meta-análises, diretrizes de
-   sociedades (NCCN, ASCO, ISOPP, CPIC) e documentos oficiais (WHO, Anvisa, MS).
-5. **Cobertura**: 15–40 referências por artigo; todas citadas no texto; sem
-   referências "fantasma" (na lista sem citação) e sem citações sem referência.
+Use o [modelo de declaração](templates/DECLARACAO_USO_IA.md).
 
-## 3. Metodologia honesta
+## 3. Definir o desenho antes de escrever
 
-A seção de métodos descreve **exatamente o que foi feito**, sem parecer mais
-rigorosa do que é:
+O título, o objetivo, o método e as conclusões devem descrever o mesmo estudo.
 
-- Revisão narrativa: bases consultadas (PubMed, SciELO, LILACS/BVS, Google Scholar),
-  palavras-chave/descritores DeCS/MeSH, período, critérios de inclusão/exclusão e
-  total de trabalhos selecionados.
-- **SEM** fluxograma PRISMA, avaliação de risco de viés ou contagens de
-  triagem/duplicatas — a menos que o processo sistemático tenha sido realmente
-  executado e documentado.
-- Exemplo: "Foi realizada revisão narrativa da literatura com busca nas bases
-  PubMed, SciELO e LILACS, priorizando publicações dos últimos cinco anos. Estudos
-  anteriores foram utilizados quando considerados referências fundamentais."
+### Revisão narrativa
 
-## 4. Discussão e considerações
+- Adequada para síntese crítica ampla, atualização ou discussão conceitual.
+- Registrar bases, plataformas, termos, datas, filtros e critérios realmente usados.
+- Não usar fluxograma PRISMA, contagens de triagem, avaliação de risco de viés ou linguagem de revisão sistemática se essas etapas não foram executadas.
+- Explicar como as fontes foram selecionadas e quais limitações decorrem do método.
 
-- Comparar achados/argumentos com **estudos específicos** (autor, ano, desenho,
-  achado principal) — nunca "diversos estudos demonstram".
-- Números e intervalos com origem indicada (de qual estudo cada valor foi extraído).
-- **Sem superlativos insustentáveis**: evitar "a intervenção de maior custo-benefício
-  disponível"; usar "importante estratégia de segurança passível de implementação".
-- Toda afirmação precisa de referência correspondente. Afirmação sem fonte
-  ("Estudos brasileiros relatam...") = corrigir ou remover.
-- Incluir **limitações reais e proporcionais** ao desenho do estudo.
+### Revisão sistemática ou de escopo
 
-## 5. Redação — o que evitar (padrões de texto genérico)
+- Formular pergunta estruturada e protocolo antes da busca final.
+- Guardar estratégias completas, exportações, remoção de duplicatas, decisões de inclusão, extração e avaliação crítica.
+- Usar a diretriz de relato apropriada. O [PRISMA 2020](https://www.prisma-statement.org/prisma-2020) oferece checklist e fluxogramas para revisões sistemáticas; ele melhora o relato, mas não corrige um método que não foi executado.
+- Declarar número e independência dos revisores, resolução de conflitos e eventual registro do protocolo.
 
-Frases que não devem aparecer (ou no máximo uma vez, com contexto):
+### Estudo original
 
-- "Esses achados convergem para a recomendação de que..."
-- "Diante desse cenário, este artigo teve como objetivo..."
-- "A literatura analisada confirma que..."
-- "A atuação do farmacêutico é de extrema importância para garantir a segurança e a eficácia..."
+- Não usar título que prometa prevalência, impacto, validação, desenvolvimento de modelo ou avaliação institucional sem dados realmente coletados e analisados.
+- Confirmar necessidade de aprovação ética, consentimento, registro e plano estatístico.
+- Usar dados reais somente em ambiente autorizado, desidentificados e sob governança; exemplos e testes no repositório devem ser fictícios.
 
-Também evitar:
+## 4. Busca e seleção das fontes
 
-- Padrão mecânico repetido em parágrafos sucessivos:
-  "estudo A mostrou X → estudo B mostrou Y → esses achados demonstram → recomendação".
-- Resumo excessivamente "perfeito" e previsível (períodos de tamanho e construção
-  muito semelhantes).
-- Afirmações categóricas sem demonstrar de onde os valores foram construídos.
+Não existem números mágicos universais para quantidade de bases, referências ou proporção de anos recentes. A cobertura deve ser justificada pela pergunta e pelo desenho.
 
-**NUNCA**: usar ferramentas de "humanizar IA", trocar palavras aleatoriamente ou
-introduzir erros propositais.
+Para cada fonte de informação, registrar:
 
-## 6. Declaração de uso de IA
+- base e plataforma;
+- data exata da busca;
+- consulta completa e filtros;
+- quantidade recuperada;
+- formato e nome do arquivo exportado;
+- deduplicação e decisão de seleção;
+- data-limite da atualização.
 
-Se a revista ou instituição exigir, declarar o uso conforme a política editorial.
-O uso de IA para estruturação e revisão é declarado; o conteúdo, a interpretação e
-as decisões metodológicas são do autor.
+Google Scholar e buscadores gerais podem apoiar descoberta e rastreamento de citações, mas não substituem bases apropriadas quando a pergunta exige busca reprodutível.
 
-## 7. Estrutura padrão (IJAERS)
+## 5. Validação das referências e alegações
 
-1. Título (claro, direto) + versão em inglês
-2. Autor: Paulo Henrique Campos da Silva (único) — FACIMED — Cacoal, RO, Brasil
-3. Resumo (180–260 palavras, fluxo contínuo) + Palavras-chave (3–6)
-4. ABSTRACT + Keywords
-5. I. INTRODUÇÃO (3–4 parágrafos; último parágrafo com objetivo explícito)
-6. II. MATERIAIS E MÉTODOS (revisão: bases, descritores, janela 2021–2026, critérios)
-7. III. REVISÃO DE LITERATURA (3–5 subseções temáticas, texto crítico-analítico)
-8. IV. CONSIDERAÇÕES FINAIS (síntese, implicações práticas, perspectivas)
-9. AGRADECIMENTOS (se houver)
-10. REFERÊNCIAS (numeradas em ordem alfabética, Vancouver/ABNT adaptado com DOI/URL)
+A validação tem camadas diferentes:
 
-Formatação IJAERS: margens 1" sup/inf e 0,64" esq/dir; título 24 pt; autor 16 pt;
-afiliação 10 pt; espaçamento 1,15. Plágio < 10% (IJAERS rejeita > 30%).
+1. **Existência:** DOI, PMID, ISBN ou URL oficial resolve.
+2. **Identidade:** título, autores, periódico, ano, volume, páginas e versão conferem.
+3. **Integridade:** verificar correção, expressão de preocupação ou retratação.
+4. **Apoio:** o texto integral sustenta exatamente a frase, número ou recomendação citada.
+5. **Atualidade:** diretriz, bula, norma e estimativa ainda estão vigentes.
 
-## 8. Aprendizados do lote de 63 artigos (verificação de 957 referências)
+Crossref e PubMed ajudam nas três primeiras camadas, mas não comprovam sozinhos a quarta. Toda afirmação quantitativa ou clínica deve apontar para evidência que a suporte.
 
-Resultado da verificação CrossRef + PubMed:
+## 6. Redação científica
 
-| Categoria | Quantidade | Ação |
-|---|---|---|
-| Verificadas OK no CrossRef | 700 | Nenhuma |
-| Confirmadas no PubMed | 76 | Conferir volume/páginas |
-| Documentos reais sem DOI (livros, guidelines, RDC, bulas) | 166 | Confirmar URL/acesso |
-| Exigem correção manual | 15 | Corrigir título/periódico/ano |
+- Escrever afirmação, evidência, interpretação e limite em sequência lógica.
+- Comparar estudos específicos, considerando desenho, população, contexto e incerteza.
+- Evitar frases genéricas como “diversos estudos demonstram” sem identificação das fontes.
+- Não ampliar associação para causalidade nem resultado intermediário para benefício clínico.
+- Distinguir recomendação de diretriz, conclusão dos autores e interpretação própria.
+- Incluir limitações proporcionais ao desenho e às fontes disponíveis.
+- Revisar terminologia em português e inglês; tradução automática não substitui revisão especializada.
 
-Lições aplicadas:
+## 7. Revista e formato
 
-1. **15 referências precisaram correção manual** (título/DOI trocados). Sempre
-   conferir título oficial no CrossRef antes de citar.
-2. **Artigos clássicos dominavam a bibliografia** de vários temas (2001–2018) —
-   daí a regra de 60% de referências 2021–2026.
-3. Documentos oficiais (ISOPP Standards, NCCN, CTCAE, bulas, RDC) existem e são
-   verificáveis por URL, mesmo sem DOI CrossRef.
-4. Cada artigo deve trazer **NOTA METODOLÓGICA** (não publicar) listando qualquer
-   dado incerto que exija verificação antes da submissão.
+O formato é parametrizado por periódico e tipo de artigo. Antes de submeter, arquivar uma cópia datada das instruções consultadas.
 
-## 9. Fluxo de produção (squad artigos-cientificos)
+Use a [biblioteca de perfis editoriais](journal_profiles/) e resolva o nome ou sigla pelo [catálogo de aliases](journal_profiles/CATALOGO.json). Cada perfil separa regra oficial de padrão apenas observado em publicações. A amostra estilística ajuda a avaliar aderência, mas nunca substitui a instrução aos autores.
 
-1. **Foco** — tema, tipo (revisão/original), idioma, restrição de período.
-2. **Pesquisa** — 4+ bases, descritores DeCS/MeSH, ≥60% refs 2021–2026.
-3. **Verificação** — 100% das referências via CrossRef/PubMed (VERIFICADA/CORRIGIDA/NÃO LOCALIZADA).
-4. **Redação** — aplicando as orientações deste documento.
-5. **Aprovação** — revisão do usuário (aprovar/feedback/abortar).
-6. **Consolidação** — formatação IJAERS + checklist de submissão + declaração de IA.
+Fluxo mínimo por revista:
 
-## 10. Checklist de submissão (IJAERS)
+1. escolher o tipo de artigo compatível com o estudo realmente realizado;
+2. verificar a página oficial no dia da preparação e novamente antes da submissão;
+3. produzir análise de lacunas antes de reformatar o texto;
+4. adaptar estrutura, resumo, citações e declarações sem mudar resultados ou criar método;
+5. aplicar o [guia de voz autoral](journal_profiles/GUIA_VOZ_AUTORAL.md);
+6. registrar regras consultadas, alterações e aprovações humanas.
 
-- [ ] Plágio < 10% (software de plágio antes de enviar)
-- [ ] Todas as referências citadas no texto e verificadas (CrossRef/PubMed)
-- [ ] ≥60% das referências de 2021–2026
-- [ ] Metodologia honesta (sem aparência de sistemática em revisão narrativa)
-- [ ] Discussão com comparações a estudos específicos
-- [ ] Limitações reais presentes
-- [ ] Sem frases genéricas de IA e sem superlativos insustentáveis
-- [ ] Formato IJAERS (margens, fontes, espaçamento, seções)
-- [ ] Resumo + palavras-chave (PT/EN)
-- [ ] Declaração de uso de IA (se exigida pela política editorial)
-- [ ] Autor correspondente: Paulo Henrique Campos da Silva (henrikcampos7@gmail.com)
-- [ ] Arquivo em .doc/.docx/.pdf
-- [ ] Copyright form após aceite
-- [ ] Submissão: editor.ijaers@gmail.com / https://ijaers.com/submit-paper/
+Na consulta de 23 de agosto de 2026, as [instruções da IJAERS](https://ijaers.com/instruction-to-author/) informavam:
+
+- seções Title, Abstract, Keywords, Introduction, Method, Results, Discussion, Conclusion, Acknowledgment e References;
+- referências em formato APA;
+- margens superior/inferior de 1 polegada e laterais de 0,64 polegada;
+- título em 24 pt, autores em 16 pt, afiliação em 10 pt e espaçamento 1,15;
+- arquivos DOC, DOCX, PDF ou LaTeX e textos em inglês, português ou espanhol.
+
+Essas informações não tornam a revista automaticamente adequada. Use a [diligência do periódico](docs/DILIGENCIA_IJAERS_2026-08-23.md) e confira novamente as páginas oficiais antes de qualquer submissão.
+
+## 8. Similaridade, plágio e originalidade
+
+Nenhum percentual isolado prova ausência de plágio. Relatórios de similaridade precisam de interpretação humana, porque citações, métodos padronizados e referências podem elevar a pontuação, enquanto paráfrase imprópria pode não ser detectada.
+
+- Não afirmar “sem plágio” com busca amostral na web ou comparação por n-gramas.
+- Revisar citações diretas, paráfrases, figuras, tabelas, traduções e reaproveitamento de texto próprio.
+- Guardar o relatório completo e a decisão humana, sem usar detectores de IA como critério de autoria.
+
+## 9. Portões de aprovação
+
+Um manuscrito só avança quando todos os itens aplicáveis estão documentados:
+
+- [ ] pergunta, desenho e título coerentes;
+- [ ] autoria, afiliação, ORCID e contribuições confirmados;
+- [ ] protocolo e estratégia de busca arquivados;
+- [ ] fontes verificadas quanto a identidade, integridade e apoio à alegação;
+- [ ] resultados e números rastreáveis;
+- [ ] limitações declaradas;
+- [ ] revisão clínica/metodológica humana concluída;
+- [ ] dados pessoais e metadados do arquivo revisados;
+- [ ] política da revista, preprint, licença, direitos e taxas verificados;
+- [ ] uso de IA registrado e declarado conforme a política;
+- [ ] aprovação final explícita de todos os autores;
+- [ ] submissão realizada manualmente por pessoa autorizada.
+
+## 10. Regra de parada
+
+Se faltarem dados, fonte integral, autorização ética, autoria, licença, revisão especializada ou evidência do método, o texto permanece **rascunho não validado**. A lacuna deve ser registrada; não pode ser preenchida por inferência da IA.

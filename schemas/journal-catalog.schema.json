@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/henrikcampos7-max/artigos-cientificos/schemas/journal-catalog.schema.json",
+  "title": "Catálogo de perfis editoriais",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "last_verified", "purpose", "journals"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "last_verified": {"type": "string", "format": "date"},
+    "purpose": {"type": "string", "minLength": 10},
+    "journals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "name", "aliases", "region", "classification", "profile"],
+        "properties": {
+          "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "name": {"type": "string", "minLength": 3},
+          "former_name": {"type": "string", "minLength": 3},
+          "aliases": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 2}
+          },
+          "region": {"enum": ["nacional", "internacional", "avaliada"]},
+          "classification": {
+            "enum": ["referencia-tematica", "referencia-ampla", "aspiracional-alta-seletividade", "diligencia-reforcada"]
+          },
+          "profile": {"type": "string", "pattern": "^(nacional|internacional|avaliadas)/[a-z0-9-]+\\.md$"}
+        }
+      }
+    }
+  }
+}
