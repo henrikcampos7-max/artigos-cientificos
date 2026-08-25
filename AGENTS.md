@@ -19,6 +19,16 @@ Apoiar criação, auditoria e edição científica reprodutível em farmácia on
 - Preservar arquivos originais. Para artigo publicado, produzir errata separada; não substituir silenciosamente o PDF editorial.
 - Não incluir e-mail pessoal, endereço residencial, credenciais não confirmadas, tokens, cookies ou segredos.
 
+## Tarefas por periódico
+
+Quando o usuário indicar uma revista-alvo:
+
+1. ler `skills/preparar-artigo-para-revista/SKILL.md`;
+2. resolver o nome ou alias com `python scripts/resolver_revista.py "REVISTA"`;
+3. ler somente o perfil indicado e `journal_profiles/GUIA_VOZ_AUTORAL.md`;
+4. verificar as instruções oficiais atuais antes de considerar o manuscrito pronto;
+5. começar por uma análise de lacunas e manter separadas regras oficiais, padrões observados e decisões autorais.
+
 ## Fluxo Git
 
 1. `git status --short --branch`

@@ -4,11 +4,13 @@
 
 Repositório público de governança, auditoria e fluxos reprodutíveis para criação e revisão de artigos científicos. Ele não é um depósito automático de manuscritos em preparação nem substitui revisão metodológica, clínica, ética ou editorial humana.
 
-## Estado verificado em 23 de agosto de 2026
+## Estado verificado em 24 de agosto de 2026
 
 - quatro publicações IJAERS únicas com Paulo Henrique Campos da Silva entre os coautores;
 - 63 DOCX gerados em lote, classificados como **rascunhos não validados**, e não como artigos publicados;
 - um manuscrito de revisão sistemática mais desenvolvido, ainda pendente de correções metodológicas, editoriais, de privacidade e de credenciais;
+- uma biblioteca editorial com perfis nacionais e internacionais, regras de citação, estruturas, políticas de IA e amostras estilísticas recentes;
+- uma skill versionada para resolver o nome da revista e conduzir uma análise de lacunas antes da adaptação;
 - arquivos-fonte locais preservados fora deste repositório público até confirmação de autoria, licença, política de preprint e ausência de dados pessoais ou confidenciais.
 
 Os achados completos estão na [auditoria do acervo](docs/AUDITORIA_ACERVO_2026-08-23.md) e na [diligência da IJAERS](docs/DILIGENCIA_IJAERS_2026-08-23.md).
@@ -33,6 +35,10 @@ Os achados completos estão na [auditoria do acervo](docs/AUDITORIA_ACERVO_2026-
 - [Diligência da IJAERS](docs/DILIGENCIA_IJAERS_2026-08-23.md)
 - [Inventário dos 63 rascunhos](docs/INVENTARIO_RASCUNHOS_2026-08-23.csv)
 - [Modelos de trabalho](templates/)
+- [Biblioteca de perfis editoriais](journal_profiles/)
+- [Catálogo de revistas e aliases](journal_profiles/CATALOGO.json)
+- [Guia de voz autoral autêntica](journal_profiles/GUIA_VOZ_AUTORAL.md)
+- [Skill para preparação por revista](skills/preparar-artigo-para-revista/SKILL.md)
 - [Esquema de metadados](schemas/article-metadata.schema.json)
 - [Política de licenças](LICENSES/README.md)
 
@@ -54,7 +60,11 @@ O diretório `publication/` recebe apenas arquivos cuja redistribuição esteja 
 
 ## Revista-alvo
 
-Nenhuma revista é alvo padrão. A IJAERS pode ser considerada somente após diligência atualizada de escopo, indexação, revisão, custos, preservação, direitos e política de IA. As instruções atuais da revista exigem seções de método, resultados, discussão e conclusão e referências em APA; essas regras podem mudar e devem ser consultadas novamente antes de cada submissão.
+Nenhuma revista é alvo padrão. O [catálogo editorial](journal_profiles/CATALOGO.json) distingue referências temáticas, periódicos amplos, alvos aspiracionais de alta seletividade e revistas que exigem diligência reforçada. A classificação orienta a análise de aderência; não constitui ranking, endosso nem promessa de aceite.
+
+A IJAERS permanece na categoria de diligência reforçada. Suas regras e limitações estão em perfil próprio e devem ser confirmadas novamente antes de qualquer submissão.
+
+Pedidos futuros podem usar nome, sigla ou alias, por exemplo: “prepare para JOPP” ou “adapte para a Revista Brasileira de Cancerologia”. A primeira entrega deve ser uma análise de lacunas; nenhuma adaptação pode inventar etapas, dados ou credenciais.
 
 ## Validação local
 

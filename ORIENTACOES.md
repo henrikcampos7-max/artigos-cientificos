@@ -1,6 +1,6 @@
 # Orientações para criação e edição de artigos científicos
 
-Revisão editorial de 23 de agosto de 2026. Este documento organiza o trabalho; as decisões científicas, clínicas, éticas e de autoria permanecem com pessoas identificadas e responsáveis.
+Revisão editorial de 24 de agosto de 2026. Este documento organiza o trabalho; as decisões científicas, clínicas, éticas e de autoria permanecem com pessoas identificadas e responsáveis.
 
 ## 1. Autoria responsável e voz própria
 
@@ -91,6 +91,17 @@ Crossref e PubMed ajudam nas três primeiras camadas, mas não comprovam sozinho
 ## 7. Revista e formato
 
 O formato é parametrizado por periódico e tipo de artigo. Antes de submeter, arquivar uma cópia datada das instruções consultadas.
+
+Use a [biblioteca de perfis editoriais](journal_profiles/) e resolva o nome ou sigla pelo [catálogo de aliases](journal_profiles/CATALOGO.json). Cada perfil separa regra oficial de padrão apenas observado em publicações. A amostra estilística ajuda a avaliar aderência, mas nunca substitui a instrução aos autores.
+
+Fluxo mínimo por revista:
+
+1. escolher o tipo de artigo compatível com o estudo realmente realizado;
+2. verificar a página oficial no dia da preparação e novamente antes da submissão;
+3. produzir análise de lacunas antes de reformatar o texto;
+4. adaptar estrutura, resumo, citações e declarações sem mudar resultados ou criar método;
+5. aplicar o [guia de voz autoral](journal_profiles/GUIA_VOZ_AUTORAL.md);
+6. registrar regras consultadas, alterações e aprovações humanas.
 
 Na consulta de 23 de agosto de 2026, as [instruções da IJAERS](https://ijaers.com/instruction-to-author/) informavam:
 

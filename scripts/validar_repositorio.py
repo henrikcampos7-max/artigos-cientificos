@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -19,6 +20,14 @@ REQUIRED = {
     "docs/DILIGENCIA_IJAERS_2026-08-23.md",
     "templates/metadata-artigo.example.json",
     "schemas/article-metadata.schema.json",
+    "journal_profiles/README.md",
+    "journal_profiles/GUIA_VOZ_AUTORAL.md",
+    "journal_profiles/CATALOGO.json",
+    "schemas/journal-catalog.schema.json",
+    "skills/preparar-artigo-para-revista/SKILL.md",
+    "skills/preparar-artigo-para-revista/agents/openai.yaml",
+    "scripts/resolver_revista.py",
+    "templates/PERFIL_REVISTA.md",
 }
 TEXT_EXTENSIONS = {".md", ".py", ".json", ".yml", ".yaml", ".csv", ".txt"}
 STATUS_VALUES = {
@@ -36,6 +45,7 @@ MARKDOWN_LINK = re.compile(r"!?(?:\[[^]]*\])\(([^)]+)\)")
 EMAIL = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I)
 WINDOWS_USER_PATH = re.compile(r"\b[A-Z]:\\Users\\[^\\\s]+", re.I)
 DOI = re.compile(r"^10\.\d{4,9}/\S+$", re.I)
+SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
 def fail(errors: list[str], message: str) -> None:
@@ -88,6 +98,64 @@ def check_metadata(path: Path, data: object, errors: list[str]) -> None:
         fail(errors, f"DOI inválido em {path.relative_to(ROOT)}: {doi!r}")
 
 
+def normalize_alias(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", " ", normalized.lower()).strip()
+
+
+def check_journal_catalog(data: object, errors: list[str]) -> None:
+    if not isinstance(data, dict):
+        fail(errors, "journal_profiles/CATALOGO.json deve conter um objeto JSON")
+        return
+    journals = data.get("journals")
+    if not isinstance(journals, list) or not journals:
+        fail(errors, "journal_profiles/CATALOGO.json não contém periódicos")
+        return
+
+    seen_slugs: set[str] = set()
+    seen_aliases: dict[str, str] = {}
+    allowed_regions = {"nacional", "internacional", "avaliada"}
+    for index, journal in enumerate(journals, start=1):
+        if not isinstance(journal, dict):
+            fail(errors, f"periódico {index} do catálogo não é objeto")
+            continue
+        slug = journal.get("slug")
+        name = journal.get("name")
+        region = journal.get("region")
+        profile = journal.get("profile")
+        aliases = journal.get("aliases")
+        if not isinstance(slug, str) or not SLUG.fullmatch(slug):
+            fail(errors, f"slug inválido no catálogo: {slug!r}")
+            continue
+        if slug in seen_slugs:
+            fail(errors, f"slug duplicado no catálogo: {slug}")
+        seen_slugs.add(slug)
+        if not isinstance(name, str) or not name.strip():
+            fail(errors, f"nome ausente no catálogo: {slug}")
+        if region not in allowed_regions:
+            fail(errors, f"região inválida no catálogo para {slug}: {region!r}")
+        if not isinstance(profile, str):
+            fail(errors, f"perfil ausente no catálogo: {slug}")
+        else:
+            profile_path = (ROOT / "journal_profiles" / profile).resolve()
+            profiles_root = (ROOT / "journal_profiles").resolve()
+            if profiles_root not in profile_path.parents or not profile_path.is_file():
+                fail(errors, f"perfil inexistente ou fora da biblioteca para {slug}: {profile}")
+        if not isinstance(aliases, list) or not aliases:
+            fail(errors, f"aliases ausentes no catálogo: {slug}")
+            continue
+        for alias in [name, *aliases]:
+            if not isinstance(alias, str) or not alias.strip():
+                fail(errors, f"alias inválido no catálogo: {slug}")
+                continue
+            key = normalize_alias(alias)
+            owner = seen_aliases.get(key)
+            if owner and owner != slug:
+                fail(errors, f"alias ambíguo no catálogo: {alias!r} ({owner} e {slug})")
+            else:
+                seen_aliases[key] = slug
+
+
 def main() -> int:
     errors: list[str] = []
     for relative in sorted(REQUIRED):
@@ -125,13 +193,15 @@ def main() -> int:
                 fail(errors, f"JSON inválido em {relative}: {exc}")
             else:
                 check_metadata(path, data, errors)
+                if relative.as_posix() == "journal_profiles/CATALOGO.json":
+                    check_journal_catalog(data, errors)
 
     if errors:
         print("Falhas de validação:")
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Validação concluída: estrutura, links, JSON, privacidade básica e arquivos temporários OK.")
+    print("Validação concluída: estrutura, perfis editoriais, links, JSON, privacidade básica e arquivos temporários OK.")
     return 0
 
 
